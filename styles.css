@@ -1,0 +1,25 @@
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #111;
+  color: #eee;
+  margin: 0;
+  padding: 1rem;
+}
+header, main, footer { max-width: 800px; margin: 0 auto; }
+h1 { color: #6cf; }
+#controls { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin: 1rem 0; }
+label { display: flex; flex-direction: column; font-size: 0.9rem; }
+input, select, button { padding: 0.4rem; background: #222; color: #eee; border: 1px solid #444; }
+button { cursor: pointer; }
+button:hover { background: #333; }
+#recipes button { margin-right: 0.5rem; }
+#status { font-size: 0.85rem; color: #aaa; }
+#playhead { margin: 1rem 0; height: 40px; background: #222; position: relative; }
+#bars { height: 100%; background: #6cf; width: 0%; transition: width 0.05s linear; }
+.overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.85);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; z-index: 10; cursor: pointer;
+}
+.hidden { display: none; }
+footer { font-size: 0.8rem; color: #888; margin-top: 2rem; }
