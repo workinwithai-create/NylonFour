@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NylonFour — Four-bar live nylon guitar riff desk</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="tap-overlay" class="overlay">Tap to start audio</div>
+  <header>
+    <h1>NylonFour</h1>
+    <p>Four-bar live nylon guitar fingerstyle riff desk. Locks your chords to the grid so a stuck loop finally has a figure. FluidR3 acoustic nylon.</p>
+  </header>
+  <main>
+    <section id="controls">
+      <label>BPM <input type="number" id="bpm" min="60" max="180" value="92"></label>
+      <label>Key <select id="key">
+        <option value="Am">A minor</option>
+        <option value="C">C major</option>
+        <option value="G">G major</option>
+        <option value="Em">E minor</option>
+        <option value="Dm">D minor</option>
+      </select></label>
+      <label>Chords (4) <input type="text" id="chords" value="Am F C G" placeholder="Am F C G"></label>
+      <button id="play">Play</button>
+      <button id="stop">Stop</button>
+      <div id="recipes">
+        <button data-recipe="travis">Travis Picking</button>
+        <button data-recipe="arpeggio">Arpeggio Roll</button>
+        <button data-recipe="ostinato">Ostinato</button>
+        <button data-recipe="sparse">Sparse Air</button>
+      </div>
+      <div id="status">Loading samples...</div>
+    </section>
+    <section id="playhead">
+      <div id="bars"></div>
+    </section>
+    <section id="exports">
+      <button id="export-wav">Export WAV (loop)</button>
+      <button id="export-wav-tail">Export WAV (with tail)</button>
+      <button id="export-midi">Export MIDI</button>
+    </section>
+  </main>
+  <footer>
+    <p>Samples pinned to gleitz/midi-js-soundfonts@044fab8. Distinct from RiffFour, HardArp, HookLine, ArpFour. Free desk until checkout.</p>
+    <p>On iOS, silent switch mutes Web Audio.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
